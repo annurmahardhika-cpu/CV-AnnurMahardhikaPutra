@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Annur Mahardhika Putra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Efek Latar Belakang (Background) -->
+  <div class="bg-shape orb-1"></div>
+  <div class="bg-shape orb-2"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Kartu CV Utama -->
+  <div class="cv-card">
+    
+    <!-- Sidebar / Bagian Kiri -->
+    <aside class="sidebar">
+      <div class="profile-section">
+        <!-- Tempat Foto Profil -->
+        <div class="profile-img-container">
+          <img src="foto-profil.jpg" id="profile-preview" alt="Foto Profil Annur" onerror="this.src='https://lh3.googleusercontent.com/u/0/d/1LJC_szJfCMrUoUkEgeG7QUIpd6VxQl8K'">
+          <!-- Tombol Upload Foto Interaktif -->
+          <label for="image-upload" class="upload-btn" title="Ganti Foto Profil">📷 Ubah Foto</label>
+          <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
+        </div>
+
+        <h1 class="name">Annur Mahardhika Putra</h1>
+        <p class="tagline">Content Creator & Digital Media Specialist</p>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Kontak</h3>
+        <ul class="contact-list">
+          <li><strong>HP:</strong> +822-8510-4471</li>
+          <li><strong>Email:</strong> mahardhik06@gmail.com</li>
+          <li><strong>Lokasi:</strong> Ulee Kareng, Pango Deah</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Kemampuan</h3>
+        <ul class="skills-list">
+          <li>Komunikasi & Kerja Sama Tim</li>
+          <li>Editing Video (CapCut & Adobe Premiere Pro)</li>
+          <li>Kebersihan & Kerapian Kerja</li>
+          <li>Manajemen Waktu & Kerja Dinamis</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Bahasa</h3>
+        <ul class="lang-list">
+          <li><strong>Bahasa Indonesia:</strong> Fasih</li>
+          <li><strong>Bahasa Inggris:</strong> Dasar</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Konten Utama / Bagian Kanan -->
+    <main class="main-content">
+      
+      <section class="section">
+        <h2>Profil</h2>
+        <p class="profile-text">
+          Saya merupakan lulusan MAS Tgk Chiek Oemar Diyan. Saya memiliki ketertarikan tinggi di bidang pembuatan konten digital. Memiliki kreativitas dalam menghasilkan konten yang menarik serta mampu beradaptasi dengan tren terbaru di media sosial.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Pendidikan</h2>
+        <div class="timeline-item">
+          <h3>Tgk. Chiek Oemar Diyan Boarding School</h3>
+          <span class="date">Lulus tahun: 2024</span>
+        </div>
+        <div class="timeline-item">
+          <h3>UIN Ar-Raniry Banda Aceh</h3>
+          <span class="date">Sedang menjalankan pendidikan S1</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Pengalaman</h2>
+        <div class="exp-item">
+          <h3>Aktif di Organisasi Menjadi Tim Media</h3>
+          <ul>
+            <li>Berpengalaman sebagai anggota tim media pada kegiatan <strong>NVIDIA Tech Forward 2025</strong> yang diselenggarakan oleh HIMA-TI berkolaborasi dengan Ibu Illiza, Wali Kota Banda Aceh.</li>
+            <li>Aktif di bagian media HIMA-TI dan UKM TESSA UIN Ar-Raniry.</li>
+            <li>Direkrut menjadi tim media saat di pesantren.</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Script untuk mengubah foto profil secara dinamis -->
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        const output = document.getElementById('profile-preview');
+        output.src = reader.result;
+      };
+      if (event.target.files[0]) {
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    }
+  </script>
+
+</body>
+</html>
